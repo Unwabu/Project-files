@@ -5,7 +5,19 @@
   },
   "dependencies": {
     "@faker-js/faker": "^9.9.0",
+    "allure-playwright": "^3.3.2",
     "csv-parse": "^6.1.0",
+    "typescript": "^5.8.3",
     "xlsx": "^0.18.5"
+  },
+  "scripts": {
+    "test:chrome": "npx playwright test --project=chromium",
+    "test:firefox": "npx playwright test --project=firefox",
+    "test:safari": "npx playwright test --project=webkit",
+    "test:all": "npx playwright test",
+    "test:debug": "npx playwright test --debug",
+    "test:group": "npx playwright test --grep <pattern>",
+    "report": "npx playwright show-report",
+    "test:dataDriven": "npx playwright test --grep @dataDriven"
   }
 }
