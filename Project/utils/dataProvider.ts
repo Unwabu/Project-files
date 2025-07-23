@@ -18,13 +18,19 @@ export class DataProvider {
     static getTestDataFromCsv(filePath: string): any[] {
         try {
             const fullPath = path.resolve(filePath);
-            const data = parse(fs.readFileSync(fullPath, 'utf8'), {
+            const fileContent = fs.readFileSync(fullPath, 'utf8');
+            
+            // More flexible CSV parsing options
+            const data = parse(fileContent, {
                 columns: true,
-                skip_empty_lines: true
+                skip_empty_lines: true,
+                trim: true,
+                skip_records_with_error: true
             });
             return data;
         } catch (error) {
             console.error(`Error reading CSV file: ${filePath}`, error);
+            console.error(`Resolved path: ${path.resolve(filePath)}`);
             throw error;
         }
     }

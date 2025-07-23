@@ -6,13 +6,13 @@ import {TestConfig} from './test.config';
 import path from 'path/win32';
 
 
-test.describe('Petstore Login Tests with JSON data', () => {
+test.describe('@smoke Petstore Login Tests with CSV data', () => {
 let login: LoginPage;
 let home: HomePage;
 let config: TestConfig;
 
-const jsonPath = path.resolve(__dirname, '../testdata/logindata.json');
-const jsonTestData = DataProvider.getTestDataFromJson(jsonPath);
+const csvPath = path.resolve(__dirname, '../testdata/logindata.csv');
+const csvData = DataProvider.getTestDataFromCsv(csvPath);
 
 test.beforeEach(async ({ page }) => {
  login = new LoginPage(page);
@@ -21,12 +21,8 @@ test.beforeEach(async ({ page }) => {
          await page.goto(config.baseUrl);
 })
 
-test.afterEach(async ({ page }) => {
-    await page.close();
-  });
-
-  for(const data of jsonTestData) {
-    test(` @dataDriven login to the petstore with ${data.testName} `, async ({ page }) => {
+  for(const data of csvData) {
+    test(`@dataDriven login to the petstore with ${data.testName} `, async ({ page }) => {
       await login.loginToThePetstore(data.username, data.password);
       if (data.expected.toLowerCase() === 'success') {
         const cardTitles = await home.getCardTitleTexts();
