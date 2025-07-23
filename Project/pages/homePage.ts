@@ -7,15 +7,16 @@ export class HomePage {
   private readonly page: Page;
   private readonly loginSubmitButton: Locator;
   private readonly cardTitles: Locator;
-
-
+  private readonly storeNavButton: Locator;
+  private readonly dashboard: Locator;
 
   constructor(page: Page) {
     this.page = page;
     this.loginSubmitButton = page.getByTestId('login__submit');
     // Locator can handle multiple elements and provides methods like .first(), .count(), .nth(), etc.
     this.cardTitles = page.locator('mat-card-title');
-    
+    this.storeNavButton = page.getByTestId('navigation__store');
+      this.dashboard = page.locator('app-dashboard');
   }
 
 async getCardTitleTexts(): Promise<string[]> {
@@ -42,4 +43,13 @@ async getCardTitleTexts(): Promise<string[]> {
             return [];
         }
     }
+
+async navigateToStore() {
+    await this.storeNavButton.click();
+  }
+
+  getDashboard(): Locator {
+    return this.dashboard;
+  }
+
 }
