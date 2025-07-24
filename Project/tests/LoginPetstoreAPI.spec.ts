@@ -6,7 +6,7 @@ test('login to petstore API', async ({ request }) => {
 	const response = await request.get(apiUrl + "/login");
 	const responseBody = await response.json();
 	expect(response.ok()).toBeTruthy();
-    expect(response.status()).toBe(200);
+    expect(response.status()).toBe(200);//same as above
     console.log('Response Body:', responseBody);
     expect(responseBody.message).toContain('logged in user session:');
 });

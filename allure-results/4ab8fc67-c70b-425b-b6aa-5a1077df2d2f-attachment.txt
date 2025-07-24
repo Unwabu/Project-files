@@ -1,0 +1,26 @@
+🚨 Violation: region
+👉 Description: Ensure all page content is contained by landmarks
+💡 Help: All page content should be contained by landmarks
+📘 More info: https://dequeuniversity.com/rules/axe/4.10/region?application=playwright
+🔥 Impact: moderate
+  ⚠️ Affected Element: .navbar__headline
+  🧱 HTML Snippet: <div _ngcontent-kge-c204="" routerlink="/home" class="navbar__headline" tabindex="0"><img _ngcontent-kge-c204="" src="/assets/images/testifi-icon.png" alt="" class="navbar__icon"><h1 _ngcontent-kge-c204="">Testifi Training Environment</h1></div>
+  ❗ Failure Summary: Fix any of the following:
+  Some page content is not contained by landmarks
+  ⚠️ Affected Element: .ng-star-inserted.ng-tns-c188-1[_ngcontent-kge-c188=""] > h1
+  🧱 HTML Snippet: <h1 _ngcontent-kge-c188="" class="ng-tns-c188-1">Login</h1>
+  ❗ Failure Summary: Fix any of the following:
+  Some page content is not contained by landmarks
+  ⚠️ Affected Element: #login__username
+  🧱 HTML Snippet: <mat-form-field _ngcontent-kge-c188="" id="login__username" appearance="outline" class="mat-form-field ng-tns-c188-1 ng-tns-c58-2 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder">
+  ❗ Failure Summary: Fix any of the following:
+  Some page content is not contained by landmarks
+  ⚠️ Affected Element: #login__password
+  🧱 HTML Snippet: <mat-form-field _ngcontent-kge-c188="" id="login__password" appearance="outline" class="mat-form-field ng-tns-c188-1 ng-tns-c58-3 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-outline mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder">
+  ❗ Failure Summary: Fix any of the following:
+  Some page content is not contained by landmarks
+  ⚠️ Affected Element: p
+  🧱 HTML Snippet: <p _ngcontent-kge-c188="" class="ng-tns-c188-1">don't have an account yet?</p>
+  ❗ Failure Summary: Fix any of the following:
+  Some page content is not contained by landmarks
+--------------------------------------------------

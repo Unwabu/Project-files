@@ -17,6 +17,7 @@ test.beforeEach(async ({ page }) => {
 
 test("Visual test for naviagte",async ({ page }) => {
 await expect(page).toHaveScreenshot('login-page.png');
+expect (await page.screenshot()).toMatchSnapshot('login-page.png');//same as above
 });
 
 test("Verify sign in",async ({ page }) => {

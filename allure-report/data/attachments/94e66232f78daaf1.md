@@ -1,0 +1,62 @@
+# Page snapshot
+
+```yaml
+- link "Skip to content":
+  - /url: "#MainContent"
+- listbox:
+  - option "Sell your homemade pet goods find unique pet products"
+- banner:
+  - button "Site navigation"
+  - link "Petstore.com":
+    - /url: /
+    - img "Petstore.com"
+  - link "Sellers":
+    - /url: https://sp-seller.webkul.com/?sid=16093
+  - link "Log in":
+    - /url: /account
+  - link "Search":
+    - /url: /search
+  - link "Cart":
+    - /url: /cart
+- main:
+  - heading "404 Page Not Found" [level=1]
+  - paragraph: The page you were looking for does not exist.
+  - paragraph:
+    - link "Continue shopping":
+      - /url: /
+- contentinfo:
+  - paragraph: Sign up and save
+  - paragraph: Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.
+  - text: Enter your email
+  - textbox "Enter your email"
+  - button
+  - list:
+    - listitem:
+      - link "Instagram":
+        - /url: https://www.instagram.com/petstoredotcom/
+    - listitem:
+      - link "Facebook":
+        - /url: https://www.facebook.com/petstoredotcom/
+    - listitem:
+      - link "Twitter":
+        - /url: https://twitter.com/PetStoreDeals
+  - list:
+    - listitem:
+      - link "Terms of Service":
+        - /url: /policies/terms-of-service
+    - listitem:
+      - link "Privacy":
+        - /url: /policies/privacy-policy
+    - listitem:
+      - link "Shipping":
+        - /url: /policies/shipping-policy
+    - listitem:
+      - link "Returns":
+        - /url: /policies/refund-policy
+    - listitem:
+      - link "Blog":
+        - /url: /blogs/news
+  - paragraph:
+    - link "Powered by Shopify":
+      - /url: https://www.shopify.com?utm_campaign=poweredby&utm_medium=shopify&utm_source=onlinestore
+```

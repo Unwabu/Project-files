@@ -1,0 +1,1 @@
+[{"values":["Chromium,firefox,webkit"],"name":"Browser"},{"values":["Test"],"name":"Environment"},{"values":["https://training.testifi.io"],"name":"Base.URL"},{"values":["Windows"],"name":"OS"},{"values":["18.x"],"name":"Node.Version"},{"values":["1.54.1"],"name":"Playwright.Version"},{"values":["Playwright"],"name":"Test.Framework"}]

@@ -1,0 +1,4 @@
+Number of elements found inside the method: 2
+Element 1 text: Pets
+Element 2 text: Store
+Final titles array: [ 'Pets', 'Store' ]
