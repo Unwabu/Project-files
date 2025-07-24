@@ -15,7 +15,7 @@ private readonly errorMassage: Locator;
     this.page = page;
     this.usernameInput = page.getByRole("textbox", { name: "Username" });
     this.passwordInput = page.getByRole("textbox", { name: "Password" });
-    this.loginSubmitButton = page.getByTestId("login__submit");
+    this.loginSubmitButton = page.locator('#login__submit');
     this.errorMassage = page.getByTestId('cdk-overlay-1').getByText('Username or password are wrong');
 
   }
