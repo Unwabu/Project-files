@@ -3,14 +3,13 @@ import {LoginPage} from '../pages/loginPage';
 import {HomePage} from '../pages/homePage';
 import { DataProvider } from '../utils/dataProvider';
 import {TestConfig} from './test.config';
-import path from 'path'; // path/win32 değil sadece path
+import path from 'path';
 
 test.describe('@smoke Petstore Login Tests with CSV data', () => {
 let login: LoginPage;
 let home: HomePage;
 let config: TestConfig;
 
-// GitHub Actions için doğru path
 const csvPath = path.join('testdata', 'logindata.csv');
 const csvData = DataProvider.getTestDataFromCsv(csvPath);
 
@@ -22,7 +21,7 @@ test.beforeEach(async ({ page }) => {
 })
 
   for(const data of csvData) {
-    test(`@dataDriven login to the petstore with ${data.testName} `, async ({ page }) => {
+    test(`@dataDriven login to the petstore with ${data.testName}`, async ({ page }) => {
       await login.loginToThePetstore(data.username, data.password);
       if (data.expected.toLowerCase() === 'success') {
         const cardTitles = await home.getCardTitleTexts();

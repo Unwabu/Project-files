@@ -15,9 +15,6 @@ config = new TestConfig();
      home = new HomePage(page);
 })
 
-test.afterEach(async ({ page }) => {
-    await page.close();
-  });
 
   test('valid login to the petstore with demoUser', async ({ page }) => {
    

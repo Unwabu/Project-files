@@ -3,16 +3,15 @@ import {LoginPage} from '../pages/loginPage';
 import {HomePage} from '../pages/homePage';
 import { DataProvider } from '../utils/dataProvider';
 import {TestConfig} from './test.config';
-import path from 'path/win32';
+import path from 'path'; // Cross-platform path
 
-
-test.describe('Petstore Login Tests with JSON data', () => {
+test.describe('@smoke Petstore Login Tests with JSON data', () => {
 let login: LoginPage;
 let home: HomePage;
 let config: TestConfig;
 
 // GitHub Actions için cross-platform path
-const jsonPath = path.join('Project', 'testdata', 'logindata.json');
+const jsonPath = path.join('testdata', 'logindata.json');
 const jsonTestData = DataProvider.getTestDataFromJson(jsonPath);
 
 test.beforeEach(async ({ page }) => {
