@@ -3,16 +3,15 @@ import {LoginPage} from '../pages/loginPage';
 import {HomePage} from '../pages/homePage';
 import { DataProvider } from '../utils/dataProvider';
 import {TestConfig} from './test.config';
-import path from 'path/win32';
-
+import path from 'path'; // path/win32 değil sadece path
 
 test.describe('@smoke Petstore Login Tests with CSV data', () => {
 let login: LoginPage;
 let home: HomePage;
 let config: TestConfig;
 
-// GitHub Actions  cross-platform path
-const csvPath = path.join('Project', 'testdata', 'logindata.csv');
+// GitHub Actions için doğru path
+const csvPath = path.join('testdata', 'logindata.csv');
 const csvData = DataProvider.getTestDataFromCsv(csvPath);
 
 test.beforeEach(async ({ page }) => {
