@@ -12,10 +12,10 @@ export class HomePage {
 
   constructor(page: Page) {
     this.page = page;
-    this.loginSubmitButton = page.getByTestId('login__submit');
+    this.loginSubmitButton = page.locator('#login__submit');
     // Locator can handle multiple elements and provides methods like .first(), .count(), .nth(), etc.
     this.cardTitles = page.locator('mat-card-title');
-    this.storeNavButton = page.getByTestId('navigation__store');
+    this.storeNavButton = page.locator('#navigation__store');
       this.dashboard = page.locator('app-dashboard');
   }
 
