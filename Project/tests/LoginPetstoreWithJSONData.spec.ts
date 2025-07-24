@@ -11,7 +11,8 @@ let login: LoginPage;
 let home: HomePage;
 let config: TestConfig;
 
-const jsonPath = path.resolve(__dirname, '../testdata/logindata.json');
+// GitHub Actions için cross-platform path
+const jsonPath = path.join('Project', 'testdata', 'logindata.json');
 const jsonTestData = DataProvider.getTestDataFromJson(jsonPath);
 
 test.beforeEach(async ({ page }) => {

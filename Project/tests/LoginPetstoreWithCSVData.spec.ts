@@ -11,7 +11,8 @@ let login: LoginPage;
 let home: HomePage;
 let config: TestConfig;
 
-const csvPath = path.resolve(__dirname, '../testdata/logindata.csv');
+// GitHub Actions  cross-platform path
+const csvPath = path.join('Project', 'testdata', 'logindata.csv');
 const csvData = DataProvider.getTestDataFromCsv(csvPath);
 
 test.beforeEach(async ({ page }) => {
