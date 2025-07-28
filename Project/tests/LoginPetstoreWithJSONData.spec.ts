@@ -4,7 +4,7 @@ import {HomePage} from '../pages/homePage';
 import { DataProvider } from '../utils/dataProvider';
 import {TestConfig} from './test.config';
 import path from 'path'; // Cross-platform path
-
+import { RandomDataUtil } from '../utils/randomDataGenerator';
 test.describe('@smoke Petstore Login Tests with JSON data', () => {
 let login: LoginPage;
 let home: HomePage;
@@ -24,7 +24,8 @@ test.beforeEach(async ({ page }) => {
 
   for(const data of jsonTestData) {
     test(` @dataDriven login to the petstore with ${data.testName} `, async ({ page }) => {
-      await login.loginToThePetstore(data.username, data.password);
+      const dynamicUsername = RandomDataUtil.getUsername();
+      await login.loginToThePetstore(dynamicUsername, data.password);
       if (data.expected.toLowerCase() === 'success') {
         const cardTitles = await home.getCardTitleTexts();
         expect(cardTitles.length).toBeGreaterThan(1);

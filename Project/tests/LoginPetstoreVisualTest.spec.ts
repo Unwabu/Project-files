@@ -7,6 +7,7 @@ test.describe('Petstore Visual tests', () => {
 let login: LoginPage;
 let home: HomePage;
 let config: TestConfig;
+
 test.beforeEach(async ({ page }) => {
  login = new LoginPage(page);
      home = new HomePage(page);
