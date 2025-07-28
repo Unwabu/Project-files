@@ -21,9 +21,6 @@ test.beforeEach(async ({ page }) => {
          await page.goto(config.baseUrl);
 })
 
-test.afterEach(async ({ page }) => {
-    await page.close();
-  });
 
   for(const data of jsonTestData) {
     test(` @dataDriven login to the petstore with ${data.testName} `, async ({ page }) => {

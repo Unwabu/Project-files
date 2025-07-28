@@ -6,6 +6,5 @@ test.describe('@smoke Petstore HomePage Tests', () => {
 
     await home.navigateToStore();
     await expect(home.getDashboard()).toContainText('Active Orders');
-
   });
 });
